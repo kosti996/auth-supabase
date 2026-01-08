@@ -61,4 +61,8 @@ export class SupabaseService {
 
     return this.supabase.from('profiles').upsert(update)
   }
+
+  isAuthenticated() {
+    return this.session !== null;
+  }
 }
