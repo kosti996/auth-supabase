@@ -49,19 +49,6 @@ export class SupabaseService {
     return this.supabase.auth.signInWithOtp({ email })
   }
 
-  signUp(email: string, password: string) {
-    return this.supabase.auth.signUp({ email, password })
-  }
-
-  signInWithPassword(email: string, password: string) {
-    return this.supabase.auth.signInWithPassword({ email, password })
-  }
-
-  async getSession() {
-    const { data } = await this.supabase.auth.getSession()
-    return data.session
-  }
-
   signOut() {
     return this.supabase.auth.signOut()
   }
