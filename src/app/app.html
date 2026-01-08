@@ -1,0 +1,7 @@
+<div class="container" style="padding: 50px 0 100px 0">
+  @if (session) {
+  <app-account [session]="session"></app-account>
+  } @else {
+  <app-auth></app-auth>
+  }
+</div>
